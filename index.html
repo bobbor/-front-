@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>New Tab</title>
+    <style>
+        * {
+            padding: 0;
+            border: 0;
+            margin: 0;
+        }
+        :root,
+        body,
+        .wrapper {
+            position: relative;
+            height: 100%;
+            min-height: 100%;
+        }
+        body {
+            background-color: #181818;
+            color: #f8f8f8;
+            font: normal normal normal 12px/1.4 Consolas, Monaco, 'Andale Mono', monospace;
+        }
+        a {
+            color: #EE6456;
+            text-decoration: none;
+        }
+        a:hover,
+        a:focus {
+            color: #1d2939;
+            background-color: #EE6456;
+        }
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        ol {
+            display: flex;
+            margin: 0 auto;
+            height: 200px;
+        }
+        .tile {
+            background-color: #1D2939;
+            display: block;
+            width: 200px;
+            height: 200px;
+            border-top: 2px solid #D1DC48;
+            border-bottom: 2px solid #D1DC48;
+            box-sizing: border-box;
+            margin: 0 2px;
+            padding: 5px;
+
+            transition: all 150ms ease-out 0s;
+        }
+        .tile:not(.none):hover {
+            height: 400px;
+            transform: translate3d(0, -100px, 0);
+        }
+        h3 {
+            text-align: center;
+            padding-top: 100px;
+            margin-top: -1.4em;
+            margin-bottom: 20px;
+        }
+        .inner {
+            height: 0;
+            overflow: hidden;
+            list-style: none;
+            text-align: center;
+            transition: height 150ms ease-out 0s;
+        }
+        .inner li {
+            padding: 5px 0;
+        }
+        .inner li:before {
+            content: "::";
+            float: left;
+        }
+        .inner li:after {
+            content: "::";
+            float: right;
+        }
+        .tile:hover .inner {
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <ol>
+            <li class="tile">
+                <h3>mtde</h3>
+                <ul class="inner">
+                    <li><a href="http://www.motor-talk.de">live</a></li>
+                    <li><a href="http://www.motor-talk.de.stg2">stg2</a></li>
+                    <li>---</li>
+                    <li><a href="http://www.carfacto.de">facto</a></li>
+                    <li><a href="http://www.motoragent.de">agent</a></li>
+                </ul>
+            </li>
+            <li class="tile">
+                <h3>local</h3>
+                <ul class="inner">
+                    <li><a href="http://localhost:3000">3000</a></li>
+                    <li><a href="http://localhost:8002">8002</a></li>
+                    <li><a href="http://localhost:8080">8080</a></li>
+                    <li><a href="http://localhost:9001">8080</a></li>
+                    <li><a href="http://localhost:9002">8080</a></li>
+                </ul>
+            </li>
+            <li class="tile">
+                <h3>gov</h3>
+                <ul class="inner">
+                    <li><a href="http://jira.motortalk.biz">jira</a></li>
+                    <li><a href="http://mx01.motortalk.biz">mail</a></li>
+                    <li><a href="http://wiki.motortalk.biz">wiki</a></li>
+                    <li><a href="https://sources.motortalk.biz">srcs</a></li>
+                    <li><a href="http://teamcity.motortalk.biz">city</a></li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>
